@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Fredoka+One");
+
+* {
+    font-family: "Fredoka One", sans-serif;
+    margin: 0;
+    padding: 0; 
+    font-size: 1.5rem;      
+    /* color: #0532ac; */
+    text-align: center;
+}
+
+/* 通常のスタイル */
+:root {
+    --c-font: #9c477d;
+    --c-bg: #d0c7bb;
+    --c-primary-color: #df4a4a; /* プライマリカラー */
+    --c-secondary-color: #ff6600; /* セカンダリカラー */
+}
+/* ダークモードのスタイル */
+[data-theme="dark"] {
+    --c-font: #c0c012;
+    --c-bg: #222;
+    --c-primary-color: #00eeff; /* プライマリカラー */
+    --c-secondary-color: #ff6600; /* セカンダリカラー */
+}
+
+#toggle-button {
+    color: var(--c-primary-color);
+    background-color: var(--c-bg);
+    border: 1px solid var(--c-primary-color);
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    filter: drop-shadow(0 0 0.5rem var(--c-primary-color));
+}
+
+body {
+    color: var(--c-font);
+    background-color: var(--c-bg);
+}
