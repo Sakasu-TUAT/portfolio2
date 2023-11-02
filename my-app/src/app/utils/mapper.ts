@@ -1,5 +1,4 @@
 import {
-    FaTwitter,
     FaTwitch,
     FaLink,
     FaYoutube,
@@ -34,7 +33,7 @@ import {
     BsNintendoSwitch,
 } from 'react-icons/bs'
 
-export const iconMapper = {
+export const iconMapper: Record<string, React.ComponentType> = {
     twitter: RiTwitterXFill,
     twitch: FaTwitch,
     link: FaLink,

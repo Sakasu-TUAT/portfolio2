@@ -1,4 +1,4 @@
-import { Box, Heading, VStack, HStack, Flex, Divider, Wrap } from "@chakra-ui/react";
+import { Box, Heading, VStack, HStack, Divider } from "@chakra-ui/react";
 import ComponentBase from "@/components/Base";
 
 const experienceData = [
