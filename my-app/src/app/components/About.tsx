@@ -1,4 +1,5 @@
 import { Box, Heading, VStack, HStack, Flex, Divider, Wrap } from "@chakra-ui/react";
+import ComponentBase from "@/components/Base";
 
 const experienceData = [
   {
@@ -43,7 +44,7 @@ function TimeLine() {
 
 function ExperienceTimeline() {
   return (
-    <Box>
+    <Box w="100%" alignItems="center">
       {experienceData.map((experience, index) => (                                                 
         <HStack align="start" spacing={4} key={index}>
            <Box>
@@ -65,11 +66,8 @@ function ExperienceTimeline() {
 
 export default function Resume() {
   return (
-    <Box p={8}>
-      <Heading size="lg" mb={4}>
-        My Resume
-      </Heading>
+    <ComponentBase title="My Resume">
       <ExperienceTimeline />
-    </Box>
+    </ComponentBase>
   );
 }
