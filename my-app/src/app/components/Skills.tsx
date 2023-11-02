@@ -1,7 +1,4 @@
-import { 
-Heading, Center, Wrap, WrapItem 
-} from "@/common/components";
-
+import { Heading, Center, Wrap, WrapItem, VStack } from "@chakra-ui/react";
 import CustomIcon from '@/components/CustomIcon'
 
 const skills: string[] = [
@@ -23,13 +20,11 @@ function SkillsIcons({ skills } : { skills: string[]} ) {
 
 export default function Skills() {
   return (
-    <div>
-    <Heading>
-      Skills
-    </Heading>
-    <Center>
-      <SkillsIcons skills={skills} />
-    </Center>
-    </div>
+    <VStack>
+      <Heading>
+        Skills
+      </Heading>
+        <SkillsIcons skills={skills} />
+    </VStack>
   )
 }
