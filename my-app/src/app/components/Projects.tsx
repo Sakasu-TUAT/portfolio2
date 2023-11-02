@@ -1,9 +1,14 @@
 import { 
-  Box, Heading, Text, VStack, Grid, Spacer, Center, Image, Wrap, WrapItem 
+  Box, Text, Grid, Image
 } from "@/common/components";
 import ComponentBase from "@/components/Base";
 
-const projectSets = [
+interface Project {
+  imageUrl: string;
+  caption: string;
+}
+
+const projectSets: Project[] = [
   { imageUrl: "next.svg", caption: "このポートフォリオ" },
   { imageUrl: "vercel.svg", caption: "お世話になっております。"},
   { imageUrl: "ERfiring1.PNG", caption: "NHK学生ロボコンの射出システム" },
@@ -12,7 +17,7 @@ const projectSets = [
   { imageUrl: "x_bot.PNG", caption: "AtCoderProblemsのコンテストのbot" },
 ];
 
-function Projects ({ projectSets } : { projectSets: any[]  }) {
+function Projects ({ projectSets } : { projectSets: Project[]  }) {
   return (
     <Grid templateColumns="repeat(auto-fill, minmax(200px, 1fr))" gap={5} maxW="100%" >
       {projectSets.map((projectSet, index) => (

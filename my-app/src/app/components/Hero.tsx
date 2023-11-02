@@ -15,7 +15,7 @@ export default function Hero() {
       </Flex>
       <Flex flexDirection="column" alignItems="center">
       <Heading mb={4}>
-        Hey, I'm Sakasu 👍
+        ⚙ Sakasu ⚙
       </Heading>
         <Text mb={2}>
           大学のロボット研究会や競技プログラミング部で活動しています。
