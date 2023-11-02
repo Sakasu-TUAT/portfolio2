@@ -3,27 +3,27 @@ import ComponentBase from "@/components/Base";
 
 const experienceData = [
   {
-    year: "2020",
-    title: "Web Developer",
-    company: "Company A",
-    description: "Developed web applications using React and Node.js.",
+    year: "2023年 7月",
+    title: "ICPC2023国内予選突破",
+    company: "sankaKsu",
+    description: "同年11月に行われるアジア地区予選への出場権を得た",
   },
   {
-    year: "2018",
-    title: "Software Engineer",
-    company: "Company B",
-    description: "Worked on software development projects using various technologies.",
+    year: "2023年 6月",
+    title: "NHK学生ロボコン2023 準優勝",
+    company: "R.U.R",
+    description: "RRの制御, ERの射出システム, LiDARを担当",
   },
   {
-    year: "2016",
-    title: "Intern",
-    company: "Company C",
-    description: "Gained experience as an intern in software development.",
+    year: "2022年 6月",
+    title: "NHK学生ロボコン2022 ベスト6",
+    company: "R.U.R",
+    description: "決勝トーナメントへの進出を決めた",
   },
   {
-    year: "2015",
-    title: "Intern",
-    company: "Company D",
+    year: "2021年 4月",
+    title: "東京農工大学入学",
+    company: "TUAT",
     description: "Started my journey as a software developer.",
   },
 ];
