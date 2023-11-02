@@ -1,5 +1,6 @@
 import { Heading } from "@/common/components";
 import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 
 export default async function Home() {
@@ -9,6 +10,7 @@ export default async function Home() {
         新着記事
       </Heading>
       <Hero/>
+      <Projects/>
       <Skills/>
     </div>
   );

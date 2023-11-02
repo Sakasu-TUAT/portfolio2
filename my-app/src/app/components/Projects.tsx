@@ -1,35 +1,36 @@
 import { 
-  Box, Heading, Text, Button, Flex, Avatar, Center, Grid, Wrap, WrapItem 
+  Box, Heading, Text, VStack, Grid, Spacer, Center, Image, Wrap, WrapItem 
 } from "@/common/components";
 
-import CustomIcon from '@/components/CustomIcon'
-
-const skills: string[] = [
-  "cplusplus", "python", "react", "css3", "html5","javascript", "nextjs",
-  "pokemon", "rust", "postgresql"
+const projectSets = [
+  { imageUrl: "next.svg", caption: "ポートフォリオ" },
+  { imageUrl: "vercel.svg", caption: "AtCoderProblemsのコンテストのbot" },
+  { imageUrl: "vercel.svg", caption: "NHK学生ロボコンの射出システム" },
+  { imageUrl: "vercel.svg", caption: "AtCoderProblemsのコンテストのbotだと思ったのだと思った気がした" },
+  { imageUrl: "vercel.svg", caption: "AtCoderProblemsのコンテストのbotだと思ったのだと思った気がした" },
+  { imageUrl: "vercel.svg", caption: "説明3" },
 ];
 
-function SkillsIcons({ skills } : { skills: string[]} ) {
+function Projects ({ projectSets }) {
   return (
-    <Wrap spacing={4} justify="center">
-      {skills.map((skill, index) => (
-        <WrapItem key={index}>
-          <CustomIcon icon={skill} size={100} />
-        </WrapItem>
+    <Grid templateColumns="repeat(auto-fill, minmax(200px, 1fr))" gap={5} maxW="100%" >
+      {projectSets.map((projectSet, index) => (
+          <Box key={index}>
+            <Image src={projectSet.imageUrl} alt={projectSet.caption} w="100%" /> 
+            <Text mt={2}>{projectSet.caption}</Text>
+          </Box>
       ))}
-    </Wrap>
+    </Grid>
   );
 }
 
 export default function Skills() {
   return (
-    <div>
-    <Heading>
-      Skills
-    </Heading>
-    <Center>
-      <SkillsIcons skills={skills} />
-    </Center>
-    </div>
+    <VStack spacing={4}> 
+      <Heading>
+        Projects
+      </Heading> 
+      <Projects projectSets={projectSets} />
+    </VStack>
   )
 }
