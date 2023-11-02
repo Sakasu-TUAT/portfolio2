@@ -1,17 +1,18 @@
 import { 
   Box, Heading, Text, VStack, Grid, Spacer, Center, Image, Wrap, WrapItem 
 } from "@/common/components";
+import ComponentBase from "@/components/Base";
 
 const projectSets = [
-  { imageUrl: "next.svg", caption: "ポートフォリオ" },
-  { imageUrl: "vercel.svg", caption: "AtCoderProblemsのコンテストのbot" },
-  { imageUrl: "vercel.svg", caption: "NHK学生ロボコンの射出システム" },
-  { imageUrl: "vercel.svg", caption: "AtCoderProblemsのコンテストのbotだと思ったのだと思った気がした" },
-  { imageUrl: "vercel.svg", caption: "AtCoderProblemsのコンテストのbotだと思ったのだと思った気がした" },
-  { imageUrl: "vercel.svg", caption: "説明3" },
+  { imageUrl: "next.svg", caption: "このポートフォリオ" },
+  { imageUrl: "vercel.svg", caption: "お世話になっております。"},
+  { imageUrl: "ERfiring1.PNG", caption: "NHK学生ロボコンの射出システム" },
+  { imageUrl: "ERfiring2.PNG", caption: "ER格好いいのでもう一枚" },
+  { imageUrl: "portfolio1.PNG", caption: "一つ目のポートフォリオ" },
+  { imageUrl: "x_bot.PNG", caption: "AtCoderProblemsのコンテストのbot" },
 ];
 
-function Projects ({ projectSets }) {
+function Projects ({ projectSets } : { projectSets: any[]  }) {
   return (
     <Grid templateColumns="repeat(auto-fill, minmax(200px, 1fr))" gap={5} maxW="100%" >
       {projectSets.map((projectSet, index) => (
@@ -26,11 +27,8 @@ function Projects ({ projectSets }) {
 
 export default function Skills() {
   return (
-    <VStack spacing={4}> 
-      <Heading>
-        Projects
-      </Heading> 
+    <ComponentBase title="Projects">
       <Projects projectSets={projectSets} />
-    </VStack>
+    </ComponentBase>
   )
 }

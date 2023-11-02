@@ -1,5 +1,6 @@
-import { Heading, Center, Wrap, WrapItem, VStack } from "@chakra-ui/react";
+import {Wrap, WrapItem} from "@chakra-ui/react";
 import CustomIcon from '@/components/CustomIcon'
+import ComponentBase from "@/components/Base"; 
 
 const skills: string[] = [
   "cplusplus", "python", "react", "css3", "html5","javascript", "nextjs",
@@ -20,11 +21,8 @@ function SkillsIcons({ skills } : { skills: string[]} ) {
 
 export default function Skills() {
   return (
-    <VStack>
-      <Heading>
-        Skills
-      </Heading>
-        <SkillsIcons skills={skills} />
-    </VStack>
+    <ComponentBase title="Skills">
+      <SkillsIcons skills={skills} />
+    </ComponentBase>
   )
 }
