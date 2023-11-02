@@ -26,9 +26,16 @@ import {
     MdCatchingPokemon,
 } from 'react-icons/md'
 
+import {
+    RiTwitterXFill,
+} from 'react-icons/ri'
+
+import {
+    BsNintendoSwitch,
+} from 'react-icons/bs'
 
 export const iconMapper = {
-    twitter: FaTwitter,
+    twitter: RiTwitterXFill,
     twitch: FaTwitch,
     link: FaLink,
     youtube: FaYoutube,
@@ -44,4 +51,5 @@ export const iconMapper = {
     postgresql: BiLogoPostgresql,
     rust: FaRust,
     pokemon: MdCatchingPokemon,
+    switch: BsNintendoSwitch,
 }
