@@ -18,8 +18,7 @@ export default function Hero() {
         Hey, I'm Sakasu 👍
       </Heading>
         <Text mb={2}>
-        I'm a software developer based in Lagos, Nigeria. I specialize in building (and occasionally designing)
-          exceptional websites, applications, and everything in between.
+          大学のロボット研究会や競技プログラミング部で活動しています。
         </Text>
         <Button>Read More</Button>
       </Flex>
