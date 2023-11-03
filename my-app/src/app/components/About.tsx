@@ -6,7 +6,7 @@ const experienceData = [
     year: "2023.07",
     title: "ICPC2023国内予選突破",
     company: "sankaKsu",
-    description: "同年11月のアジア地区予選への出場権を獲得",
+    description: "アジア地区予選への出場権を獲得",
   },
   {
     year: "2023.06",
@@ -31,7 +31,7 @@ const experienceData = [
 function TimeLine({h} : {h: string}) {
   return (
     <VStack alignItems="center" spacing={0} h={h}>
-      <Circle size='25px' bg="cyan.500" color='white'>
+      <Circle size='25px' bg="cyan.500" color='white' marginY={0}>
         <Circle size='15px' bg='white' color='white'></Circle>
       </Circle>
       <Divider
@@ -52,7 +52,7 @@ function ExperienceTimeline() {
         templateAreas={`"year divider activity"`}
         gridTemplateRows={'1fr '}
         gridTemplateColumns={'1fr 1fr 5fr'}
-        minH="150px" 
+        minH="160px" 
         gap='1'
         color='blackAlpha'
         fontWeight='bold'
@@ -64,8 +64,8 @@ function ExperienceTimeline() {
       <GridItem pl='2' bg='' area={'divider'}>
         <TimeLine h={"100%"}/>
       </GridItem>
-      <Box borderWidth="1px" borderColor="gray.100" p={0} borderRadius="md" marginY={5}>
-        <GridItem pl='2' bg='' area={'activity'} marginY={1}>
+      <Box marginY={0} h="auto">
+        <GridItem pl='2' bg='' area={'activity'} marginY={1} borderWidth="1px" p={2} borderRadius="md" borderColor="gray.100">
           <Heading size="md">{experience.title}</Heading>
           <Heading size="md" color="teal.500">{experience.company}</Heading>
           <Text overflowWrap="break-word" fontWeight="light"> {experience.description}</Text>
