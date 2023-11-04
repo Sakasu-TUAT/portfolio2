@@ -2,7 +2,6 @@ import {
   Box,
   Heading,
   Text,
-  Button,
   Flex,
   Avatar
 } from "../common/components";
@@ -20,7 +19,6 @@ export default function Hero() {
         <Text mb={2}>
           大学のロボット研究会や競技プログラミング部で活動しています。
         </Text>
-        <Button>Read More</Button>
       </Flex>
     </Box>
   );
