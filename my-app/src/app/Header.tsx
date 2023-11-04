@@ -7,7 +7,7 @@ export function ColorSwitchButton() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Button 
-      size='lg' 
+      size='sm' 
       onClick={toggleColorMode}
       fontSize="sm"
       color="white"
@@ -17,7 +17,7 @@ export function ColorSwitchButton() {
       }}
     >
      <Icon
-        as={colorMode === 'light' ? FaMoon : FaSun}
+        as={colorMode === 'light' ? FaSun : FaMoon}
         boxSize={4} // アイコンの大きさを設定
       />
     </Button>
