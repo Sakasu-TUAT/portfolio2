@@ -17,7 +17,7 @@ export function ColorSwitchButton() {
       }}
     >
      <Icon
-        as={colorMode === 'light' ? FaMoon : FaSun}
+        as={colorMode === 'light' ? FaSun : FaMoon}
         boxSize={4} // アイコンの大きさを設定
       />
     </Button>
