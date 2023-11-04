@@ -1,5 +1,28 @@
-import { Box, Flex, Heading, Button } from "./common/components";
+"use client";
+import { Box, Flex, Heading, Button, Icon, useColorMode} from "./common/components";
 import NextLink from "next/link";
+import { FaMoon, FaSun } from "react-icons/fa"
+
+export function ColorSwitchButton() {
+  const { colorMode, toggleColorMode } = useColorMode();
+  return (
+    <Button 
+      size='lg' 
+      onClick={toggleColorMode}
+      fontSize="sm"
+      color="white"
+      bg="orange.400"
+      _hover={{
+        bg: "orange.300",
+      }}
+    >
+     <Icon
+        as={colorMode === 'light' ? FaMoon : FaSun}
+        boxSize={4} // アイコンの大きさを設定
+      />
+    </Button>
+  );
+}
 
 export default function Header() {
   return (
@@ -19,19 +42,7 @@ export default function Header() {
           <Heading as="h1" size="lg">
             <NextLink href="/">Sakasu&apos;s Note</NextLink>
           </Heading>
-          <Button
-            as={NextLink}
-            fontSize="sm"
-            fontWeight={600}
-            color="white"
-            bg="orange.400"
-            href="/articles/new"
-            _hover={{
-              bg: "orange.300",
-            }}
-          >
-            MORE
-          </Button>
+          <ColorSwitchButton />
         </Flex>
       </Flex>
     </Box>
