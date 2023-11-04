@@ -7,9 +7,7 @@ export default function ComponentBase({ title, children }: { title: string, chil
   return (
       <VStack 
         as={motion.div}
-        // boxShadow="md" 
-        p={4}
-        borderRadius="md"
+        p={1}
         spacing={4}
         variants={{
           offscreen: { y: 100, opacity: 0 },
@@ -21,11 +19,11 @@ export default function ComponentBase({ title, children }: { title: string, chil
       >
         <Heading p={0}>{title}</Heading>
             <Box 
-            // borderWidth="1px" borderColor="gray.300" p={8} borderRadius="md"
               boxShadow="md"
+              borderRadius="md"
               p={8}
             >
-                {children}
+              {children}
             </Box>
       </VStack>
   );
