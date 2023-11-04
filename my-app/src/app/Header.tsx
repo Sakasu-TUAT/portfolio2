@@ -7,7 +7,7 @@ export function ColorSwitchButton() {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Button 
-      size='lg' 
+      size='sm' 
       onClick={toggleColorMode}
       fontSize="sm"
       color="white"
